@@ -1,0 +1,20 @@
+The steps of writing an RSA algorithm are:
+1. Choose large primes p & q
+2. calculate the product n = p * q
+3. calculate the Euler's phi function
+Φ(n) = (p - 1) * (q - 1)
+4. choose a Public key e that belongs to the set
+{1, 2, ....., Φ(n - 1)}
+such that gcd(e, Φ(n)) = 1     (relatively primes)
+5. compute the Private key d, such that
+d * e ≡ 1 (mod Φ(n))
+
+Encryption process:
+given public key that consist of n, e
+x belongs to the set {1, 2, ...., n - 1}
+y ≡ x^e (mod n)
+
+Decryption process:
+given private key d,
+y belongs to Integers
+x ≡ y^d (mod n)
